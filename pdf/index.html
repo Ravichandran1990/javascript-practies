@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="ignorePDF">don't print this to pdf</p>
+    <div>
+      <p><font size="3" color="red">print this to pdf</font></p>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>    
+<script type="text/javascript">
+    document.querySelector('#ignorePDF').addEventListener('click', () => {
+         
+        window.jsPDF = window.jspdf.jsPDF;
+        var doc = new jsPDF();          
+        doc.text("Hello world!", 10, 10);
+        doc.save("a4.pdf");
+    
+});  
+    
+</script>    
+  </body>
+</html>
