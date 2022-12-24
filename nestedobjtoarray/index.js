@@ -60,3 +60,5 @@ function recursive(obj) {
 
 console.log(recursive(obj));
 console.log(arrN);
+
+//Added next objects
