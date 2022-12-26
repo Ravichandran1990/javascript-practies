@@ -71,5 +71,5 @@ const arr = [
        return arrF
   }
 
-  console.log(recurF(arr).length);
+  console.log(recurF(arr));
  

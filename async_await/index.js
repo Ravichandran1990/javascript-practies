@@ -5,10 +5,10 @@
      console.log(test2);
  };
 
-function func1() {
+function func1(num = 3) {
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve("Hello")
+            resolve("Hello" +num)
         }, 4000)
     })
 }
@@ -16,8 +16,18 @@ function func2() {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve("World")
-        }, 4000)
+        }, 2000)
     })
 }
 myTest();
+
+async function fun3() {
+    for (let index = 0; index < 4; index++) {
+        const log = await func1(index);
+        console.log(log);        
+    }
+}
+fun3();
+
+
  
