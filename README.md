@@ -19,4 +19,5 @@
 18. promise
 19. throttling
 20. webworker
+21. Chess board diagonal selector using javascript
 
