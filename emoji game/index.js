@@ -53,6 +53,7 @@ const min = 0;
 const max = emojiArr.length - 1;
 let maxattempts = 0;
 let setMaxAttempts = 35;
+let winner = 0;
 const attempts = document.querySelector('.attempts');
 const emojiContainer = document.querySelector('.emojiContainer');
 for (let i = 0; i < row; i++) {
@@ -130,8 +131,12 @@ function clearEmojiData() {
     const selected1 = emojiData[0].querySelector('span').innerHTML;
     const selected2 = emojiData[1].querySelector('span').innerHTML;
     if(selected1 === selected2) {
+        winner++;
         emojiData[0].classList.add('matched');
         emojiData[1].classList.add('matched');
+        if(winner === 8) {
+            document.querySelector('.winner').innerHTML = 'You won the game click on the link for <a href="http://virantechnology.com"> Sign Up Now </a>'
+        }
     }
     for (let index = 0; index < emojiData.length; index++) {         
         emojiData[index].classList.remove('selected');
