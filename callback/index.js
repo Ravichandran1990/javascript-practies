@@ -9,5 +9,4 @@
         setTimeout(function() {
             fn(test);
         }, 3000)
-
     }

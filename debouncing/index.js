@@ -10,10 +10,10 @@ const debounce = (...args) => {
     
 }
 let timer;
-function debounce1(func, timeout = 3000){
+function debounce1(func, timeout = 3000, a){
     return (...args) => {
       clearTimeout(timer);
-      timer = setTimeout(() => { func.apply(this, args); }, timeout);
+      timer = setTimeout(() => { func.apply(this, a); }, timeout);
     };
   }
 // let debo = debounce
@@ -23,7 +23,7 @@ document.querySelector('#btn').addEventListener('click', testing.bind(this));
 // testing();
 // let test;
 function testing() {
-    debounce1(load, 3000, 123)();
+    debounce1(load, 3000, 123);
 }
  
 function load(params) {    
