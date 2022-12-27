@@ -54,6 +54,7 @@ const max = emojiArr.length - 1;
 let maxattempts = 0;
 let setMaxAttempts = 35;
 let winner = 0;
+let randamBoxmaxElement = 15;
 const attempts = document.querySelector('.attempts');
 const emojiContainer = document.querySelector('.emojiContainer');
 for (let i = 0; i < row; i++) {
@@ -75,10 +76,11 @@ function emojiSetData() {
     for (let index = 0; index < emojiContainerDiv.length - 8; index++) {
         const index = getRandomBoxElem();
         emojiIndexedArray.push(index);
-        emojiIndexedArray.push(emojiContainerDiv.length - index);
+        const dublicateEmojiIndex = getRandomBoxElem();
+        emojiIndexedArray.push(dublicateEmojiIndex);
         const emojiNo = "&#"+getRandomEmojiNo();
         spanEmojiEle(emojiContainerDiv[index], emojiNo);  
-        spanEmojiEle(emojiContainerDiv[(emojiContainerDiv.length - 1) - index], emojiNo);  
+        spanEmojiEle(emojiContainerDiv[dublicateEmojiIndex], emojiNo);  
     }
 }
 
@@ -89,7 +91,7 @@ function spanEmojiEle(ele, emoji) {
 }
 
 function getRandomBoxElem() {
-    const index = Math.round(Math.random() * (7 - 0)) + 0;
+    const index = Math.round(Math.random() * (randamBoxmaxElement - 0)) + 0;
     return emojiIndexedArray.indexOf(index) === -1 ? index : getRandomBoxElem();
 }
 function getRandomEmojiNo() {
