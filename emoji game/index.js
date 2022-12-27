@@ -120,7 +120,7 @@ function randomEmojiSetter(event) {
     const spanEle = event.querySelector('span');
     const emoji = spanEle.getAttribute('data-emoji');
     spanEle.innerHTML = emoji;
-
+    spanEle.style.animation = "pop 0.25s ease-in-out";
     if(clickCount >= 2) {
         clearEmojiData();
         clickCount = 0;
@@ -155,7 +155,7 @@ function removeSelector(event) {
 }
 
 function reachedMaxAttempts() {
-    if(maxattempts > setMaxAttempts) {        
+    if(maxattempts > setMaxAttempts && winner !== 8) {        
         document.querySelector('.maxattempts').innerHTML = "You reached maximum attempts. You loose the game. try to to re-attempt."
         setTimeout(() => {
             document.querySelector('.maxattempts').innerHTML = "";

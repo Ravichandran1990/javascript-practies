@@ -90,6 +90,22 @@
         .attempts span{
             color: aqua;
         }
+        /* Popup */
+        .emojiContainer div.selected span {
+            animation: pop 0.25s ease-in-out;
+        }
+        .emojiContainer div.matched{ 
+            background: #15e48ee6;
+        }
+        .emojiContainer div.matched span {
+            animation: pop 0.25s infinite !important;
+        }
+         
+        @keyframes pop{
+            50%  {
+                transform: scale(1.25);
+            }
+        }
         @media(max-width: 460px) {
             .emojiContainer {
                 display: grid;
