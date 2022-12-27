@@ -54,7 +54,7 @@
         }
 
         /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-        @media screen and (max-width: 500px) {
+        @media(max-width: 500px) {
         .header a {
             float: none;
             display: block;
@@ -64,13 +64,7 @@
             float: none;
         }
         }
-        @media screen and (max-width: 400px) {
-            .emojiContainer {
-                display: grid;
-                grid-template-columns: repeat(4, 70px);
-                grid-template-rows: repeat(4, 70px);
-            }
-        }
+        
         .emojiContainer {
             display: grid;
             grid-template-columns: repeat(4, 100px);
@@ -95,6 +89,13 @@
         }
         .attempts span{
             color: aqua;
+        }
+        @media(max-width: 460px) {
+            .emojiContainer {
+                display: grid;
+                grid-template-columns: repeat(4, 70px);
+                grid-template-rows: repeat(4, 70px);
+            }
         }
     </style>
     
