@@ -21,4 +21,5 @@
 20. webworker
 21. Chess board diagonal selector using javascript
 22. emoji game
-
+23. Fetch promise handle diferent way with async with out then method//https://jsonplaceholder.typicode.com/todos/1
+24. fetch with catch block for custom exception
