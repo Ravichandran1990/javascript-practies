@@ -44,7 +44,7 @@ async function todos() {
     }).then((result) => {
         return result;
     }).catch((err) => {
-        console.log("err "+err);
+        console.log("err "+err); // err 404 not found
     });
     console.log(await promiseData);     
 }
