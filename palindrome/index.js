@@ -11,5 +11,16 @@
     }
     return string + " is palindrome"
  }
+
+ function palindrome1(string) {
+   const revstr = string.split('').reverse().join('');
+   if(string === revstr){
+      console.log(string + " is palindrome");
+   }else {
+      console.log(string +" is not palindrome");
+   }
+   
+ }
  
- console.log(palindrome("Testing"));
+ palindrome1("dada")
+ 
