@@ -34,9 +34,10 @@ Array.prototype.myCustomMap = function (fn) {
 
   return filtered;
 };
-
+const compare = 2
 const filteredData = data.myCustomMap(myFunction);
+
 function myFunction(el) {
-    if (el > 2) return el * 2;
+    if (el > compare) return el * compare;
 }
 console.log(filteredData);

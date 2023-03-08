@@ -21,13 +21,23 @@
 //     // console.log(tes);
 // })();
 
-const dates = [
-    '2019/06/01',
-    '2018/06/01',
-    '2019/09/01', // This is the most recent date, but how to find it?
-    '2018/09/01'
-  ]
-const maxDate = dates.reduce((max, d) => {
-    return d > max ? d : max
-   }, dates[0]);
-console.log(maxDate);
+// const dates = [
+//     '2019/06/01',
+//     '2018/06/01',
+//     '2019/09/01', // This is the most recent date, but how to find it?
+//     '2018/09/01'
+//   ]
+// const maxDate = dates.reduce((max, d) => {
+//     return d > max ? d : max
+//    }, dates[0]);
+// console.log(maxDate);
+
+
+function refVal(name) {
+  setTimeout(() => {
+    console.log(name);
+  },3000)
+}
+let check = "Ravi"
+refVal(check);
+check = "ravichandran";
