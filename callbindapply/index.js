@@ -11,9 +11,18 @@ const obj = {
 callFun.call(obj,"ravi","chan");
 console.log(obj);
 
+const newEntity = (obj) => console.log(obj);
+
+function mountEntity(){
+	this.entity = newEntity;
+	console.log(`Entity ${this.entity} is mounted on ${this}`);
+}
+
+mountEntity.call();
+
 const arr = ["asd_asd","qwe_asd","weqwqw_ldfk"];
 const re = arr.map(e => e.split("_")[1]);
-console.log(re);
+// console.log(re);
 
 function test(a,s) {
     console.log(a,s);
@@ -39,5 +48,29 @@ function add(a,b,c,d) {
 const addtion = curry(add);
 const radd = addtion(2)(3)(4)(5);
 console.log(radd);
+
+
+
+
+
+function Car(type, fuelType){
+	this.type = type;
+	this.fuelType = fuelType;
+}
+
+function setBrand(brand){
+	Car.call(this, "convertible", "petrol");
+	this.brand = brand;
+	console.log(`Car details = `, this);
+}
+
+function definePrice(price){
+	Car.call(this, "convertible", "diesel");
+	this.price = price;
+	console.log(`Car details = `, this);
+}
+
+const newBrand = new setBrand('Brand1');
+const newCarPrice = new definePrice(100000);
 
 
